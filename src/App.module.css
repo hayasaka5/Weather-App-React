@@ -1,0 +1,332 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  background-image: url(assets/default.png); /* Замените путь, если необходимо */
+  min-height: 100vh;
+  background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь контейнер */
+  background-position: center; /* Центрирование изображения */
+  background-repeat: no-repeat; /* Отключение повторения изображения */
+  display: flex;
+  flex-direction: column; /* Flex для вертикального расположения */
+  justify-content: space-between; /* Расположение верхней и нижней части */
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw 3vw;
+}
+
+.topText {
+  font-size: 14vw;
+}
+
+.topLocation {
+  margin: 5vw 0 0 0;
+  height: 3vw;
+  width: auto;
+  padding: 0.5vw 1vw;
+  font-size: 1.2vw;
+  border: 0.15vw solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5vw;
+  font-weight: 600;
+}
+
+.bottomDay img {
+  width: 4vw;
+  height: auto;
+  margin: 0 0 1vw 0;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* padding: 6.5vw 0 0 0; */
+  margin-top: auto;
+}
+
+.bottomDayWrap {
+  display: flex;
+  margin: 0 0 0 3.5vw;
+}
+
+.bottomDay {
+  border: 0.15vw solid black;
+  width: 8vw;
+  height: auto;
+  padding: 4vw 2vw;
+  border-radius: 5vw;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон для лучшего эффекта */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 1vw 0.7vw 3vw 0;
+  align-items: center;
+  flex-direction: column;
+}
+
+.currentTemp {
+  font-size: 10vw;
+  margin: 0 3vw 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.currentDay {
+  margin: 1.5vw 0 0 0;
+  font-size: 1.2vw;
+  font-weight: 700;
+}
+
+.dayDescription {
+  font-size: 0.8vw;
+  font-weight: 600;
+  margin: 0 0 0.3vw 0;
+}
+
+.dayTemp {
+  font-size: 0.9vw;
+}
+.topLocationMobile{
+  display: none;
+}
+@media (min-width:1024px) and (max-width:1600px) {
+  .bottomDay {
+    padding: 4vw 5vw !important;
+   
+  }
+  .bottomDay img{
+    width: 6vw;
+    height: auto;
+    margin: 0;
+  }
+  .topLocation{
+    font-size: 2vw;
+    padding: 0.75vw 1.25vw;
+  }
+  .dayDescription{
+    font-size: 1.5vw;
+    margin: 4vw 0 0 0 ;
+  }
+  .dayTemp{
+    font-size: 1.25vw;
+    margin: 0 0 4vw 0;
+  }
+  .currentDay{
+    font-size: 1.75vw;
+  }
+}
+
+@media (min-width:800px) and (max-width:1024px){
+  .app {
+    /* background-image: url(assets/mobileBlue.png)!important; */
+    background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь контейнер */
+    background-position: center; /* Центрирование изображения */
+    background-repeat: no-repeat; /* Отключение повторения изображения */
+    height: 100%; /* Высота на всю высоту экрана */
+    
+  }
+  .top{
+    display: none;
+  }
+  .bottom{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    margin: 2vw 0 0 0;
+  }
+  .currentTemp{
+    justify-content: center;
+    display: flex;
+    font-size: 15vw;
+  }
+  .bottomDayWrap{
+    flex-direction: column ;
+  }
+  .bottomDay {
+    border: 0.15vw solid black;
+    width: 94vw;
+    height: 10vh;
+    margin: 1vw;
+    padding: 1vw 2vw;
+    border-radius: 16vw;
+    backdrop-filter: blur(5px);
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+   
+  }
+  .currentDay{
+    font-size: 4vw;
+  }
+  .bottomDay img{
+    width: 6vw;
+    height: auto;
+  }
+  .dayDescription{
+    font-size: 3vw;
+  }
+  .dayTemp{
+    font-size: 2vw;
+  }
+  .topLocationMobile {
+    /* margin-top: 1vw; */
+    /* height: 8vw; */
+    width: auto;
+    padding: 1vw 0.9vw !important;
+    font-size: 2vw;
+    border: 0.15vw solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    font-weight: 600;
+   
+  }
+}
+@media   (max-width: 800px) {
+  .app {
+    /* background-image: url(assets/mobileBlue.png)!important; */
+    background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь контейнер */
+    background-position: center; /* Центрирование изображения */
+    background-repeat: no-repeat; /* Отключение повторения изображения */
+    height: 100%; /* Высота на всю высоту экрана */
+    
+  }
+  .top{
+    display: none;
+  }
+  .bottom{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    margin: 2vw 0 0 0;
+  }
+  .currentTemp{
+    justify-content: center;
+    display: flex;
+    font-size: 15vw;
+  }
+  .bottomDayWrap{
+    flex-direction: column ;
+  }
+  .bottomDay {
+    border: 0.15vw solid black;
+    width: 94vw;
+    height: 10vh;
+    margin: 1vw;
+    padding: 1vw 2vw;
+    border-radius: 16vw;
+    backdrop-filter: blur(5px);
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+   
+  }
+  .currentDay{
+    font-size: 4vw;
+  }
+  .bottomDay img{
+    width: 10vw;
+    height: auto;
+  }
+  .dayDescription{
+    font-size: 3vw;
+  }
+  .dayTemp{
+    font-size: 2vw;
+  }
+  .topLocationMobile {
+    margin-top: 2vw;
+    /* height: 8vw;
+    width: auto; */
+    padding: 1vw 2vw;
+    font-size: 2vw;
+    border: 0.15vw solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3vw;
+    font-weight: 600;
+   
+  }
+}
+@media  (max-width: 700px) {
+  .app {
+    /* background-image: url(assets/mobileBlue.png)!important; */
+    background-size: cover; /* Изображение будет масштабироваться, чтобы покрыть весь контейнер */
+    background-position: center; /* Центрирование изображения */
+    background-repeat: no-repeat; /* Отключение повторения изображения */
+    height: 100%; /* Высота на всю высоту экрана */
+    
+  }
+  .top{
+    display: none;
+  }
+  .bottom{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+  }
+  .currentTemp{
+    justify-content: center;
+    display: flex;
+    font-size: 15vw;
+  }
+  .bottomDayWrap{
+    flex-direction: column ;
+  }
+  .bottomDay {
+    border: 0.15vw solid black;
+    width: 94vw;
+    height: 12vh;
+    margin: 1vw;
+    padding: 1vw 2vw;
+    border-radius: 16vw;
+    backdrop-filter: blur(5px);
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+   
+  }
+  .currentDay{
+    font-size: 6vw;
+  }
+  .bottomDay img{
+    width: 15vw;
+    height: 15vw;
+  }
+  .dayDescription{
+    font-size: 5vw;
+  }
+  .dayTemp{
+    font-size: 4vw;
+  }
+  .topLocationMobile {
+    margin-top: 2vw;
+    width: auto;
+    padding: 1vw 2vw;
+    font-size: 3vw;
+    border: 0.15vw solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3vw;
+    font-weight: 600;
+   
+  }
+  
+}
